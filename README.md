@@ -33,6 +33,9 @@
     git clone git@github.com:username/project-name.git // 克隆 远程 资源. username github上的用户名，project-name 远程创库名称
 
 	git checkout -b branch-name // 创建并 切换到 branch-name 分支名
+	git branch //列出所有 分支
+
+	git checkout branch-name // 切换分支
      概念 
 	1. add 是到 staged 暂存区
     2. commit 是到 资源库  也就是.git 下管理版本的
