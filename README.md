@@ -10,6 +10,12 @@
     git commit fileName -m "commit description"//提交  -m 后跟着提交 说明
     git status // 查看本地状态 
     git diff fileName // 查看文件版本的 修改的内容 注：没有提交的做与上一个版本对比
+	git log //查看所有 commit 版本
+	git log --pretty=oneline //以一行的形式显示一个版本
+	git reset --hard HEAD // 回归 历史版本 HEAD 是当前的版本也就是最近提交的版本 
+						// HEAD^ 上一个版本 HEAD^^ 上上个版本  如果要回到那个 
+						//需要注意的是 不管回到哪个版本  需要把 最近的版本 id 号记下 以免错误回滚
+
 
 
 * a <br>
