@@ -39,13 +39,24 @@
 
 	git checkout branch-name // 切换分支
 
+	git stash //保存当前的 工作  
+	git stash list //暂时保存的 状态 列表
+	git stash apply // 恢复最近一个保存的工作 时间
+	git stash apply stash@{0} // 恢复指定的暂时保存的 工作装填
+	git stash pop //删除 list 中的状态
 
-	222
+	
 
 	git merge dev // 把dev分支的内容合并到 当前的 分支
 				merge 也可以加 -m "description" 合并的描述
 	
 	git branch -d branch-name // 删除分支
+
+	git remote -v // 获取远程 资源库的名称
+	(fetch) 是可 获取的
+	(push) 可提交的
+
+	
 
 	111
      概念 
