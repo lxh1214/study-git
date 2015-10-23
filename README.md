@@ -9,6 +9,8 @@
     git diff HEAD fileName //查看当前资源库里 与 工作区里()的 区别
 	git log //查看所有 commit 版本
 	git log --pretty=oneline //以一行的形式显示一个版本
+	git log --pretty=oneline --abbrev-commit 显示提交的 版本
+
 	git reset --hard HEAD // 回归 历史版本 HEAD 是当前的版本也就是最近提交的版本 
 						// HEAD^ 上一个版本 HEAD^^ 上上个版本  如果要回到那个 
 						//需要注意的是 不管回到哪个版本  需要把 最近的版本 id 号记下 以免错误回滚
@@ -45,13 +47,33 @@
 	git stash apply stash@{0} // 恢复指定的暂时保存的 工作装填
 	git stash pop //删除 list 中的状态
 
+	git checkout -b local-branch-name origin/branch-name  //获取区远程的分支
+
+	git branch --set-upstream-to=origin/branche-name local-brance-name //把本地创建的分支和远程的分支 关联上
+	
+	git pull // 获取远程的 对应分支的 资源  以便于 push 操作
+
 	
 
 	git merge dev // 把dev分支的内容合并到 当前的 分支
 				merge 也可以加 -m "description" 合并的描述
 	
 	git branch -d branch-name // 删除分支
+	git branch -D branch-name //强制删除分支
 
+	git tag tagName //最近的commit 打标签
+	git tag 显示所有标签
+
+	git tag tagName commit-id // 给已提交的版本打标签
+	
+	git show tagName // 查看标签对应的提交信息
+	
+	git tag -d tagName //删除本地打好的标签
+	
+	git push origin tagName //把本地标签 推送到远程 
+	git push origin --tags // 推送所有 遍地标签
+
+	
 	git remote -v // 获取远程 资源库的名称
 	(fetch) 是可 获取的
 	(push) 可提交的
@@ -63,7 +85,8 @@
 	1. add 是到 staged 暂存区
     2. commit 是到 资源库  也就是.git 下管理版本的
     3. 工作区 就是文件创建的那个文件
-    4. 公钥 秘钥 生成 是认证 谁可以push 代码到 github 上
+    4. 公钥 秘钥 生成 是认证 谁可以
+    5. push 代码到 github 上
          
 
 
