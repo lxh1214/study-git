@@ -51,9 +51,12 @@
 
 	git branch --set-upstream-to=origin/branche-name local-brance-name //把本地创建的分支和远程的分支 关联上
 	
-	git pull // 获取远程的 对应分支的 资源  以便于 push 操作
+	git pull // 获取远程的 对应分支的 资源  会merge 到相关的本地分支 以便于 push 操作
 
-	
+	git fetch origin master // 获取远程 分支 master 的最新 版本 但不合并
+
+	git fetch origin master:tmp // 获取远程 分支master 最新的版本 并命名为tmp ，
+	git diff tmp //当前版本 与tmp 的不同 以便于 merge
 
 	git merge dev // 把dev分支的内容合并到 当前的 分支
 				merge 也可以加 -m "description" 合并的描述
