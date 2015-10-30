@@ -35,6 +35,7 @@
 	git push origin branch-name //推送 分支到github
 
     git clone git@github.com:username/project-name.git // 克隆 远程 资源. username github上的用户名，project-name 远程创库名称
+	git clone https://github.com/username/project-name.git // 也是克隆远程 资源
 
 	git checkout -b branch-name // 创建并 切换到 branch-name 分支名
 	git branch //列出所有 分支
@@ -82,7 +83,8 @@
 	(push) 可提交的
 
 	
-
+	git branch --vv 查看 本地分支和远程分支 关联信息
+	git config --list 同上 更详细的信息
 	111
      概念 
 	1. add 是到 staged 暂存区
